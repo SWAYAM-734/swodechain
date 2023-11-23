@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "swodechain_backend": {
+      "main": "src/swodechain_backend/main.mo",
+      "type": "motoko"
+    },
+    "swodechain_frontend": {
+      "dependencies": [
+        "swodechain_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/swodechain_frontend/src/index.html"
+      },
+      "source": [
+        "src/swodechain_frontend/assets",
+        "dist/swodechain_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
